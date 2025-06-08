@@ -13,7 +13,7 @@ This infrastructure deploys the following services:
 - **Lidarr** - Music management and automation
 - **Prowlarr** - Indexer management for *arr applications
 - **SABnzbd** - Usenet downloader
-- **Gravity** - DNS server and ad blocker
+- **Gravity** - DNS and DHCP server
 
 ## Prerequisites
 
@@ -157,7 +157,11 @@ terraform apply
 
 ## Service Access
 
-After deployment, services will be available at, just remember you will need DNS for this to work otherwise they will only be accesible by IP:
+After deployment, services will be available at, just remember you will need DNS for this to work and will either need to configure gravity following these docs. 
+
+https://gravity.beryju.io/docs/
+
+Or replace the gravity container with another DHCP/DNS server. 
 
 - **SWAG**: https://yourdomain.com
 - **Plex**: http://host-ip:32400/web or https://plex.yourdomain.com
